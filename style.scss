@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$dark_gray: rgb(34, 31, 31);
+$beige: #f1f1f1;
+$gray: #a89f9f;
+
+body {
+    font-family: 'Fira Mono', monospace;
+
+    span{
+        font-size:50px;
+        cursor:pointer;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: $dark_gray;
+        overflow-x: hidden;
+        transition: 0.6s;
+        padding-top: 70px;
+
+        @media screen and (max-height: 450px){
+            padding-top: 15px;
+        }
+
+        .closebtn {
+            font-size: 30px;
+        }
+
+        a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: $gray;
+            display: block;
+            transition: 0.4s;
+
+            @media screen and (max-height: 450px){
+                padding-top: 18px;
+            }
+
+            &:hover {
+                color: $beige;
+            }
+        }
+    }
+}
+
